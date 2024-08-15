@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" href="logo.jpeg" type="image/x-icon">
+    <!-- <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(17, 4, 55);
+            color: white;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(39, 58, 93);
+            padding: 0 20px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+            font-size: 11.5px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.5);
+            position: relative;
+            padding: 0 0.7rem;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.35s ease;
+        }
+
+        nav ul li a:before {
+            position: absolute;
+            content: '';
+            transition: all 0.35s ease;
+            opacity: 0;
+            left: 15%;
+            right: 15%;
+            top: 0;
+            bottom: 0;
+            border-left: 3px solid #27ae60;
+            border-right: 3px solid #27ae60;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.current {
+            color: #ffffff;
+        }
+
+        nav ul li a:hover:before,
+        nav ul li a.current:before {
+            opacity: 1;
+            left: 0;
+            right: 0;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-between;
+            margin: 80px;
+        }
+
+        .firstsection>div {
+            width: 45%;
+        }
+
+        .leftsection {
+            font-size: 3rem;
+            margin: 60px;
+        }
+
+        .rightsection img {
+            width: 80%;
+        }
+
+        .Yellow {
+            color: rgb(143, 234, 38);
+        }
+
+        .sized {
+            font-size: 2.5rem;
+        }
+
+        #element {
+            color: rgb(143, 234, 38);
+        }
+
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+            font-size: 1.2rem;
+            padding: 20px;
+            height: 80vh;
+        }
+
+        main hr {
+            border: 0;
+            background: white;
+            height: 1.2px;
+            margin: 60px 80px;
+        }
+
+        .secondsection h1 {
+            font-size: 1.9rem;
+        }
+
+        .secondsection .box {
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .secondsection .verticle {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            list-style: none;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: white;
+            left: 50%;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            box-sizing: border-box;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: -8.5px;
+            border-style: solid;
+            border-width: 8.5px 0 8.5px 8.5px;
+            border-color: transparent transparent transparent white;
+        }
+
+        .timeline-item:nth-child(odd):before {
+            left: -8.5px;
+            right: auto;
+            border-width: 8.5px 8.5px 8.5px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background: white;
+            color: black;
+            border-radius: 6px;
+        }
+
+        .timeline-content h2 {
+            margin: 0 0 10px;
+        }
+
+        .timeline-content p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .timeline:before {
+                left: 0;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .timeline-item:before {
+                left: 10px;
+                top: -8.5px;
+                right: auto;
+                border-width: 8.5px 8.5px 0 8.5px;
+                border-color: white transparent transparent transparent;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-item:nth-child(odd) {
+                left: 0;
+            }
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: white;
+            color: black;
+        }
+        /* Footer Styles */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(39, 58, 93);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-icons a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-icons img {
+    width: 24px;
+    height: 24px;
+}
+    </style> -->
+    <style>
+        .fot {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(39, 58, 93);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            align-content: flex-end;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="logo.jpeg" alt="Jay's Logo" id="header-logo">
+            <div class="left">Jay's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="firstsection">
+        <div class="leftsection">
+            My Name is <span class="Yellow">Jay</span>
+            <div class="sized">And I am Passionate</div>
+            <span id="element"></span>
+            <div class="button-container">
+                <button onclick="window.open('Jay-3.pdf', '_blank')">Download Resume</button>
+                <button onclick="window.open('https:github.com/jay0013', '_blank')">Visit Github</button>
+            </div>
+        </div>
+        <div class="rightsection">
+            <img src="bg.jpg" alt="I am Jay">
+        </div>
+    </section>
+    <hr>
+    <section class="secondsection">
+        <span class="text-gray">What I have done so far</span>
+        <h1> Knowledge </h1>
+
+        <ul class="timeline">
+            <li class="timeline-item">
+                <div class="timeline-content">
+                    <h2>Cloud - AWS</h2>
+                    <p>Worked on setting up and managing cloud infrastructure using AWS services like EC2, S3, and
+                        Lambda. Gained hands-on experience in cloud computing, security, and deployment.</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-content">
+                    <h2>Linux System Administrator</h2>
+                    <p>Assisted in managing and maintaining Linux servers, performed routine system updates, and
+                        implemented security measures. Learned about shell scripting and system automation.</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-content">
+                    <h2>PHP Developer</h2>
+                    <p>Developed and maintained web applications using PHP and MySQL. Worked on debugging and
+                        optimizing code for performance. Gained experience with frameworks like Laravel.</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-content">
+                    <h2>Java Developer</h2>
+                    <p>Contributed to the development of Java-based applications. Worked on implementing features,
+                        fixing bugs, and writing unit tests. Gained proficiency in Java and OOP principles.</p>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-content">
+                    <h2>Web Design</h2>
+                    <p>Designed and implemented responsive web interfaces using HTML, CSS, and JavaScript.
+                        Collaborated with the design team to create user-friendly and visually appealing websites.
+                    </p>
+                </div>
+            </li>
+        </ul>
+
+    </section>
+    </main>
+    <!-- Responsive Footer -->
+    <footer class="fot">
+        <div class="footer-content">
+            <div class="footer-icons">
+                <a href="https://facebook.com" aria-label="Facebook">
+                    <img src="face.png" alt="Facebook">
+                </a>
+                <a href="https://www.linkedin.com/in/jay-chavda-a28945233/" aria-label="LinkedIn">
+                    <img src="link.png" alt="LinkedIn">
+                </a>
+                <a href="https://twitter.com" aria-label="Twitter">
+                    <img src="twit.png" alt="Twitter">
+                </a>
+                <a href="https://github.com/jay0013" aria-label="Twitter">
+                    <img src="github.jpeg" alt="Github">
+                </a>
+            </div>
+            <p>&copy; 2024 Jay's Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer'],
+            typeSpeed: 50,
+        });
+    </script>
+
+</body>
+
+</html>
